@@ -1,6 +1,6 @@
 # Portfolio App
 
-This is a Ruby on Rails 5 application thet allows users to create their own portfolios
+> This is a Ruby on Rails 5 application thet allows users to create their own portfolios    
 **(Testing the Markdown syntax)**
 
 ### Features
