@@ -3,7 +3,7 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Lets get this started !! 
+Lets get this started 
 
 Things you may want to cover:
 
