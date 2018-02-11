@@ -1,5 +1,5 @@
 class Portfolio < ApplicationRecord
-
+  include Placeholder 
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   #defining a scope that will filter the portfolio items based on their subtitle
@@ -17,8 +17,9 @@ class Portfolio < ApplicationRecord
   #sets the default image and thumb image as default in case is not chosen
   #||= this will set a default image if image holder is nill (it will not overwrite an image if is already beeing set)
   def set_defaults
-    self.main_image ||= "http://via.placeholder.com/600x400"
-    self.thumb_image ||= "http://via.placeholder.com/350x200"
+    #image_generator def created in the controllers/concerns/placeholder.rb
+    self.main_image ||= Placeholder.image_generator(height: '600', width: '400')
+    self.thumb_image ||= Placeholder.image_generator(height: '350', width: '200')
   end
 end
 
