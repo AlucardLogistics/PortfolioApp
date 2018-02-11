@@ -1,5 +1,12 @@
 class Portfolio < ApplicationRecord
+
+  #table relationship one to many technologies (rails handle pluralization)
+  has_many :technologies
+
+  #this is a placeholder file created in the controllers/concerns/placeholder.rb
   include Placeholder 
+
+  #validation for the porfolio fields (can't be empty condition)
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   #defining a scope that will filter the portfolio items based on their subtitle
