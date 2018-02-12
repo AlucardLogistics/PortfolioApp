@@ -3,6 +3,8 @@ class Portfolio < ApplicationRecord
   #table relationship one to many technologies (rails handle pluralization)
   has_many :technologies
 
+  accepts_nested_attributes_for :technologies
+
   #this is a placeholder file created in the controllers/concerns/placeholder.rb
   include Placeholder 
 
