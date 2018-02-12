@@ -3,7 +3,9 @@ class Portfolio < ApplicationRecord
   #table relationship one to many technologies (rails handle pluralization)
   has_many :technologies
 
-  accepts_nested_attributes_for :technologies
+  #accepts attributes from technologies table and validates to not be blank
+  accepts_nested_attributes_for :technologies, 
+                                reject_if: lambda { |attrs| attrs['name'].blank? }
 
   #this is a placeholder file created in the controllers/concerns/placeholder.rb
   include Placeholder 
