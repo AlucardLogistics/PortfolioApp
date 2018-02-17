@@ -3,4 +3,10 @@ class ApplicationController < ActionController::Base
   #devise_whitelist.rb file in controllers/concerns
   include DeviseWhitelist
 
+  before_action :set_source
+
+  def set_source
+    session[:source] = params[:q] if params[:q]
+  end
+
 end
