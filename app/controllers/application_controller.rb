@@ -4,5 +4,7 @@ class ApplicationController < ActionController::Base
   include DeviseWhitelist
   #set_source.rb file in controllers/concerns
   include SetSource
+  #current_user_concern.rb file in controllers/concerns
+  include CurrentUserConcern
 
 end
