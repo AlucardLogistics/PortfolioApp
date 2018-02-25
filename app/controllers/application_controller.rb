@@ -6,5 +6,9 @@ class ApplicationController < ActionController::Base
   include SetSource
   #current_user_concern.rb file in controllers/concerns
   include CurrentUserConcern
+  #default_page_content.rb in the controllers/concerns
+  include DefaultPageContent
+
+
 
 end
