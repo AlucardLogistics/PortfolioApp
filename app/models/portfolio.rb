@@ -7,7 +7,7 @@ class Portfolio < ApplicationRecord
   accepts_nested_attributes_for :technologies, 
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
-  #this is a placeholder file created in the controllers/concerns/placeholder.rb
+  #this is a placeholder file created in the models/concerns/placeholder.rb
   include Placeholder 
 
   #validation for the porfolio fields (can't be empty condition)
