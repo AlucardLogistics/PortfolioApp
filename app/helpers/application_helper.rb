@@ -11,4 +11,12 @@ module ApplicationHelper
     end
   end
 
+  #add a paragraph that shows the landing page from where the user came when visiting the app
+  def source_helper(layout_name)
+    if session[:source]
+      greeting = "Thanks for visiting me from #{session[:source]}. Welcome to the #{layout_name} layout."
+      content_tag(:p, greeting, class: "source-greeting")
+    end
+  end
+
 end
