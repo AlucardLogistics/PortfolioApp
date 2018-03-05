@@ -12,16 +12,8 @@
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <!-- will look for a partial _blog.html.erb (singular) and it will iterate @blogs object based on the partial model-->
+    <%= render @blogs %>
   </tbody>
 </table>
 
