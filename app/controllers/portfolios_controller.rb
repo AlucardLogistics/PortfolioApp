@@ -1,6 +1,11 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
   layout "portfolio"
+  #petergate access role implemetation
+  #access all: all user roles will accees blog :show and :index actions
+  #user: access can not delete a blog any other actions can be added like new create edit update
+  #site_admin: defined as custom role in user.rb model
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
 
   def index
     @portfolio_items = Portfolio.all

@@ -1,6 +1,11 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout "blog"
+  #petergate access role implemetation
+  #access all: all user roles will accees blog :show and :index actions
+  #user: access can not delete a blog any other actions can be added like new create edit update
+  #site_admin: defined as custom role in user.rb model
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
 
   # GET /blogs
   # GET /blogs.json

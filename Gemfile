@@ -56,6 +56,8 @@ gem 'devise', '~> 4.4', '>= 4.4.1'
 # gem for Bootstrap
 gem 'bootstrap', '~> 4.0.0'
 # JQuery for rails for rails 5.1+
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 #custom made gem that will handle the @copyright tag
 gem 'alucard_logistics_view_tool', git: 'https://github.com/AlucardLogistics/alucard_logistics_view_tool'
+#Petergate gem for authorization structure
+gem 'petergate', '~> 1.8', '>= 1.8.1'
