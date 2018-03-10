@@ -29,9 +29,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'friendly_id', '~> 5.1.0'
-# gem for authentication
-gem 'devise', '~> 4.4', '>= 4.4.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -51,3 +48,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# gem that provides friendly URLs (takes blog title and set it instead of blog ID in the URL)
+gem 'friendly_id', '~> 5.1.0'
+# gem for authentication
+gem 'devise', '~> 4.4', '>= 4.4.1'
+# gem for Bootstrap
+gem 'bootstrap', '~> 4.0.0'
+# JQuery for rails for rails 5.1+
+gem 'jquery-rails'
