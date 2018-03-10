@@ -8,7 +8,4 @@ class ApplicationController < ActionController::Base
   include CurrentUserConcern
   #default_page_content.rb in the controllers/concerns
   include DefaultPageContent
-
-
-
 end
