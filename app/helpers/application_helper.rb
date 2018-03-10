@@ -19,4 +19,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    AlucardLogisticsViewTool::Renderer.copyright 'Dragos Stoian', 'All rights reserved'
+  end
+
 end

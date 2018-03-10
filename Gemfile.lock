@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/AlucardLogistics/alucard_logistics_view_tool
+  revision: 10ee6f85414991e2ce6eac7a160d1e1e04bd207b
+  specs:
+    alucard_logistics_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -183,6 +189,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  alucard_logistics_view_tool!
   bootstrap (~> 4.0.0)
   byebug
   coffee-rails (~> 4.2)

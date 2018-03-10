@@ -22,6 +22,9 @@
     
     <%= yield %>
 
+    <!-- custom gem that displayes the @copyright variable -->
+    <%= copyright_generator %>
+
     <!-- method found in helpers/application_helper.rb-->
     <%= source_helper("application") %>
   </body>
