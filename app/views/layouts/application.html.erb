@@ -16,21 +16,23 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-    <!-- render the navigation partial from shared folder -->
-    <%= render "shared/nav", location: 'top' %>
+        <!-- render the navigation partial from shared folder -->
+        <%= render "shared/application_nav" %>
 
-    <!-- method found in helpers/application_helper.rb-->
-    <%= login_helper %>
-    
-    <%= yield %>
+        <!-- method found in helpers/application_helper.rb-->
+        <%= login_helper %>
+        
+        <%= yield %>
 
-    <!-- custom gem that displayes the @copyright variable -->
-    <%= copyright_generator %>
+        <!-- custom gem that displayes the @copyright variable -->
+        <%= copyright_generator %>
 
-    <!-- method found in helpers/application_helper.rb-->
-    <%= source_helper("application") %>
+        <!-- method found in helpers/application_helper.rb-->
+        <%= source_helper("application") %>
+    </div>
   </body>
 </html>
