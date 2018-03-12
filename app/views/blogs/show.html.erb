@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="col-sm-8 blog-main">  
+  <!-- will look for a partial _blog.html.erb (singular) and it will iterate @blogs object based on the partial model-->
+  <h2><%= @blog.title %></h2>
+  <hr>
+  <p><%= @blog.body %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
+  <b> | </b>
+  <%= link_to 'Back', blogs_path %>
 
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-<%= link_to 'Back', blogs_path %>
+
