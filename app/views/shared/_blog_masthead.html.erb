@@ -1,0 +1,7 @@
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">Loud Thoughts</h1>
+    <p class="lead blog-description">Have an opinion about something? Share with us.</p>
+    <%= link_to 'Create New Blog', new_blog_path if logged_in?(:site_admin) %>
+  </div>
+</div>

@@ -1,11 +1,7 @@
-<div class="col-sm-8 blog-main">  
+<div class="col-sm-8 blog-main"> 
+  <%= paginate @blogs %>
   <!-- will look for a partial _blog.html.erb (singular) and it will iterate @blogs object based on the partial model-->
   <%= render @blogs %>
-
-  <nav class="blog-pagination">
-    <a class="btn btn-outline-primary" href="#">Older</a>
-    <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-  </nav>
-
+  <%= paginate @blogs %>
 </div>
 

@@ -20,32 +20,20 @@
     <!-- End of nav -->
 
     <!-- start of blog header -->
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">Loud Thoughts</h1>
-        <p class="lead blog-description">Have an opinion about something? Share with us.</p>
-        <%= link_to 'Create New Blog', new_blog_path if logged_in?(:site_admin) %>
-      </div>
-    </div>
+    <%= render "shared/blog_masthead" %>
     <!-- end of blog header -->
 
    
     <div class="container">
       <div class="row">
-
         <%= yield %>
 
-        <!-- start of sidebar -->
-        <%= render 'shared/blog_sidebar' %>
-        <!-- end of sidebar -->
+      <!-- start of sidebar -->
+      <%= render 'shared/blog_sidebar' %>
+      <!-- end of sidebar -->
 
       <!-- start of footer -->
-      <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        <p>
-          <a href="#">Back to top</a>
-        </p>
-      </footer>
+      <%= render "shared/blog_footer" %>
       <!-- end of footer -->
 
       <%= source_helper("blog") %>

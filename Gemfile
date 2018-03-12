@@ -61,3 +61,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'alucard_logistics_view_tool', git: 'https://github.com/AlucardLogistics/alucard_logistics_view_tool'
 #Petergate gem for authorization structure
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+#gem for styling with icons
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
+#gem for pagination
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
