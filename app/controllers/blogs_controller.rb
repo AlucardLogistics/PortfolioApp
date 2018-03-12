@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
   #access all: all user roles will accees blog :show and :index actions
   #user: access can not delete a blog any other actions can be added like new create edit update
   #site_admin: defined as custom role in user.rb model
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all
 
   # GET /blogs
   # GET /blogs.json
