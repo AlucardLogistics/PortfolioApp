@@ -1,8 +1,7 @@
 <div class="card">
   <div class="card-body">
-    <div class="row">
-      <!-- Edit user column -->
-      <div class="col-md-8">
+    <div class="row">      
+      <div class="col-md-8"><!-- Edit user column -->
         <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -45,16 +44,15 @@
             <%= f.submit "Update", class: "btn btn-primary" %>
           </div>
         <% end %>
-      </div>
-
-      <!-- Cancel account column -->
-      <div class="col-md-4">
+      </div><!-- End user edit column -->
+      
+      <div class="col-md-4"><!-- Cancel account column -->
         <h3>Cancel my account</h3>
 
         <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
         
-      </div>
-    </div>
+      </div><!-- End cancel account column -->
+    </div><!-- End row -->
 
     <div class="auth-links">
       <%= link_to "Back", :back %>
