@@ -125,3 +125,9 @@ body {
 .signup-login-style {
   text-align: right;
 }
+/*any card class nested in login class*/
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
