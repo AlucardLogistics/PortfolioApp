@@ -2,7 +2,8 @@ module ApplicationHelper
 
   #conditional that evaluates if there is a user logged in or not
   #in rails arguments can be passed without paranteses () ex: def login_helper or with ex: def source_helper(layout_name)
-  def login_helper style
+  #def login_helper style = '' this will set the default argument of the method to an empty string
+  def login_helper style = ''
     if current_user.is_a?(GuestUser)      
       (link_to "Login", new_user_session_path, class: style) +
       " ".html_safe +
