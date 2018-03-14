@@ -1,7 +1,8 @@
 <main role="main">
   <div class="album py-5 bg-light">
     <div class="container">
-      <%= link_to "Create new Portfolio (change position of this link later)", new_portfolio_path if logged_in?(:site_admin) %>
+      <%= link_to "Create new Portfolio", new_portfolio_path if logged_in?(:site_admin) %>
+      <br><br>
       <div class="row">        
 
         <!-- will look for a partial _portfolio_item.html.erb (singular) and it will iterate @portfolio_items object based on the partial model-->
