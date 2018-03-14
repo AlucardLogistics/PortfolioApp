@@ -116,19 +116,28 @@ body {
 /*
  * Custom Styles
  */
+
  .card-body {
   color: black;
   text-align: left;
  }
+
 .auth-links a {
   color: black;
 }
+
 .signup-login-style {
   text-align: right;
 }
+
 /*any card class nested in login class*/
 .login > .card {
   width: 22rem;
   margin: 0 auto;
   float: none;
+}
+
+.app-nav span {
+  margin-left: 15px;
+  margin-right: 15px;
 }
