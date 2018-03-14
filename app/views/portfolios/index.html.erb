@@ -1,10 +1,17 @@
-<h1>Portfolio Items</h1>
+<main role="main">
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <%= link_to "Create new Portfolio (change position of this link later)", new_portfolio_path if logged_in?(:site_admin) %>
+      <div class="row">        
 
-<%= link_to "Create new Portfolio", new_portfolio_path if logged_in?(:site_admin) %>
+        <!-- will look for a partial _portfolio_item.html.erb (singular) and it will iterate @portfolio_items object based on the partial model-->
+        <%= render partial: 'portfolio_item', collection: @portfolio_items %>
+        <!-- in order for this to work it is needed for the controller name, model name and object name to be the same. In this case
+        there is portfolios_controller.rb, portfolio.rb as model and the index object is @portfolio_items. -->
+        <!-- To fix it the partial is declared in the render tag and collection is telling rails that the object @portfolio_items is a collection type -->
 
-<!-- will look for a partial _portfolio_item.html.erb (singular) and it will iterate @portfolio_items object based on the partial model-->
-<%= render partial: 'portfolio_item', collection: @portfolio_items %>
-<!-- in order for this to work it is needed for the controller name, model name and object name to be the same. In this case
-there is portfolios_controller.rb, portfolio.rb as model and the index object is @portfolio_items. -->
-<!-- To fix it the partial is declared in the render tag and collection is telling rails that the object @portfolio_items is a collection type -->
+      </div>
+    </div>
+  </div>
+</main>
   
