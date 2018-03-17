@@ -11,6 +11,14 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.by_position #custom method found in portfolio.rb model
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Portfolio.find(value[:id]).update(position: value[:position])
+    end
+
+    render nothing: true #not looking for a view
+  end
+
   def angular
     @angular_portfolio_items = Portfolio.angular
   end

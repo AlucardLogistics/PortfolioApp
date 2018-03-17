@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   #resources for users and custom URL for sign_in, sing_out and sign_up actions
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
 
-  resources :portfolios, except: [:show]
+  resources :portfolios, except: [:show] do
+    put :sort, on: :collection #created a new method sort of type PUT with specific behavior
+  end
+
   get 'angular-items', to: 'portfolios#angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   
