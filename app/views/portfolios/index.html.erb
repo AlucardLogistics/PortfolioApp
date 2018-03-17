@@ -3,7 +3,7 @@
     <div class="container">
       <%= link_to "Create new Portfolio", new_portfolio_path if logged_in?(:site_admin) %>
       <br><br>
-      <div class="row">        
+      <div class="row <%= "sortable" if logged_in?(:site_admin) %>" >        
 
         <!-- will look for a partial _portfolio_item.html.erb (singular) and it will iterate @portfolio_items object based on the partial model-->
         <%= render partial: 'portfolio_item', collection: @portfolio_items %>

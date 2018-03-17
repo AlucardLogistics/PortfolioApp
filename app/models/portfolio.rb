@@ -18,6 +18,11 @@ class Portfolio < ApplicationRecord
     where(subtitle: 'Angular')
   end
 
+  #method to place portfolio items in ASCending order in the index action
+  def self.by_position
+    order("position ASC")
+  end
+
   #defining a scope that will filter the portfolio items based on their subtitle
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
 
