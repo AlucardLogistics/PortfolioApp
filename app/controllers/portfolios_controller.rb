@@ -5,7 +5,7 @@ class PortfoliosController < ApplicationController
   #access all: all user roles will accees blog :show and :index actions
   #user: access can not delete a blog any other actions can be added like new create edit update
   #site_admin: defined as custom role in user.rb model
-  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
+  access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :edit, :update, :sort]}, site_admin: :all
 
   def index
     @portfolio_items = Portfolio.by_position #custom method found in portfolio.rb model
