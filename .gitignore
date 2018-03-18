@@ -18,5 +18,6 @@
 
 .byebug_history
 
-# I don't want to show my secrets
+# I don't want to show my secrets VERY VERY IMPORTANT TO SETUP !!!
 /config/secrets.yml
+.env
