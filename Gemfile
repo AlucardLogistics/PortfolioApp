@@ -66,3 +66,11 @@ gem 'petergate', '~> 1.8', '>= 1.8.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
 #gem for pagination
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+#gem for Upload files in your Ruby applications, map them to a range of ORMs, store them on different backends
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+#gem for manipulate images with minimal use of memory
+gem 'mini_magick', '~> 4.8'
+#gem for Use aws-sdk for S3 support in CarrierWave
+gem 'carrierwave-aws', '~> 1.3'
+#gem for Autoload dotenv in Rails
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'

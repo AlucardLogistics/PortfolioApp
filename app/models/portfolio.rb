@@ -13,6 +13,10 @@ class Portfolio < ApplicationRecord
   #validation for the porfolio fields (can't be empty condition)
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  #carrierwave gem
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   #defining a scope that will filter the portfolio items based on their subtitle
   def self.angular
     where(subtitle: 'Angular')
