@@ -13,7 +13,7 @@ class Portfolio < ApplicationRecord
   #include Placeholder 
 
   #validation for the porfolio fields (can't be empty condition)
-  validates_presence_of :title, :body
+  validates_presence_of :title, :subtitle, :body
 
   #carrierwave gem
   mount_uploader :thumb_image, PortfolioUploader

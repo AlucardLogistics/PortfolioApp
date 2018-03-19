@@ -76,3 +76,5 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 #gem for dynamic forms
 gem 'cocoon', '~> 1.2', '>= 1.2.11'
+# gem for notifications styling
+gem 'gritter', git: 'https://github.com/jordanhudgens/gritter'
