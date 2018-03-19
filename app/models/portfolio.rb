@@ -1,10 +1,12 @@
 class Portfolio < ApplicationRecord
 
   #table relationship one to many technologies (rails handle pluralization)
-  has_many :technologies
+  #inverse of: is an association for cocoon gem
+  has_many :technologies, inverse_of: :portfolio
 
   #accepts attributes from technologies table and validates to not be blank
-  accepts_nested_attributes_for :technologies, 
+  accepts_nested_attributes_for :technologies,
+                                allow_destroy: true,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
   #this is a placeholder file created in the models/concerns/placeholder.rb NO LONGER NEEDED AFTER CARRIERWAVE GEM
