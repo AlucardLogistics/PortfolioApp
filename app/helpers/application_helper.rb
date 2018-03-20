@@ -72,15 +72,30 @@ module ApplicationHelper
   #it has to start from the start of editor line (no white space) indentation as shown in this method
   #nav_links.html_safe returns the whole string as a sanitized string
   #this method is never used, is just for demo purpose
-  def nav_helper style, tag_type
-nav_links = <<NAV
-<#{tag_type}><a href="#{root_path}" class="#{style} #{active? root_path}">Home</a></#{tag_type}>
-<#{tag_type}><a href="#{about_me_path}" class="#{style} #{active? about_me_path}">About Me</a></#{tag_type}>
-<#{tag_type}><a href="#{contact_path}" class="#{style} #{active? contact_path}">Contact</a></#{tag_type}>
-<#{tag_type}><a href="#{blogs_path}" class="#{style} #{active? blogs_path}">Blog</a></#{tag_type}>
-<#{tag_type}><a href="#{portfolios_path}" class="#{style} #{active? portfolios_path}">Portfolio</a></#{tag_type}>
-NAV
-    nav_links.html_safe
-  end  
+#   def nav_helper style, tag_type
+# nav_links = <<NAV
+# <#{tag_type}><a href="#{root_path}" class="#{style} #{active? root_path}">Home</a></#{tag_type}>
+# <#{tag_type}><a href="#{about_me_path}" class="#{style} #{active? about_me_path}">About Me</a></#{tag_type}>
+# <#{tag_type}><a href="#{contact_path}" class="#{style} #{active? contact_path}">Contact</a></#{tag_type}>
+# <#{tag_type}><a href="#{blogs_path}" class="#{style} #{active? blogs_path}">Blog</a></#{tag_type}>
+# <#{tag_type}><a href="#{portfolios_path}" class="#{style} #{active? portfolios_path}">Portfolio</a></#{tag_type}>
+# NAV
+#     nav_links.html_safe
+#   end
+
+  #in variable alert if any triggers the variable will take the value of the flash triggerd
+  #if none trigger then alert will be nil
+  def alerts
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    if alert
+      alert_generator alert
+    end
+  end
+
+  def alert_generator msg
+    js add_gritter(msg, title: "AlucardLogistics", sticky: false)
+  end
+
 
 end
