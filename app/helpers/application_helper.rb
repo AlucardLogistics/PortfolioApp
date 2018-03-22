@@ -41,6 +41,10 @@ module ApplicationHelper
         title: "Contact"
       },
       {
+        url: tech_news_path,
+        title: "Rails News"
+      },
+      {
         url: blogs_path,
         title: "Blog"
       },

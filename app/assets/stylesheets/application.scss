@@ -46,7 +46,7 @@ body {
 }
 
 .cover-container {
-  width: 55em;
+  width: 65em;
 }
 
 
@@ -156,10 +156,23 @@ body {
   background-size: cover;
 }
 
-.home-page {
-  margin-top: -5rem;
-}
+
 
 .app-footer {
   color: white;
+}
+
+.tech-news {
+  color: black;
+  text-align: left;
+  margin: 20px;
+
+}
+
+.tech-news a {
+  color: blue;
+}
+
+.tech-news > .card {
+  padding: 10px;
 }
