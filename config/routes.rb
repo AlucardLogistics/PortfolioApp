@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  get 'tech-news', to: 'pages#tech_news'
 
   #create a new path inside the blogs called toggle_status with the keyword member
   resources :blogs do 
