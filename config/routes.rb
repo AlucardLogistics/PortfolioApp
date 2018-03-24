@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :comments
+  #no need for resources for comments because websocket in actioncable
+  #comments resources will be wrapped in the actioncable socket
+  #resources :comments
+  
   #resources for users and custom URL for sign_in, sing_out and sign_up actions
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
 
@@ -21,6 +24,9 @@ Rails.application.routes.draw do
       get :toggle_status
     end
   end
+
+  #allow to create websocket connection for live chat
+  mount ActionCable.server => '/cable'
 
   root to: 'pages#home'
   
