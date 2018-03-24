@@ -79,3 +79,5 @@ gem 'cocoon', '~> 1.2', '>= 1.2.11'
 # gem for notifications styling
 gem 'gritter', git: 'https://github.com/jordanhudgens/gritter'
 gem 'twitter', '~> 6.2'
+# a Ruby client that tries to match Redis' API one-to-one, while still providing an idiomatic interface.
+gem 'redis', '~> 4.0', '>= 4.0.1'

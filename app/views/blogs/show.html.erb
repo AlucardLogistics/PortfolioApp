@@ -8,6 +8,16 @@
   <b> | </b>
   <%= link_to 'Back', blogs_path %>
 
+  <!-- Start comment form -->
+  <%= render 'comments/comments_form' %>
+  <!-- End comment form -->
+
+  <!-- Start comments in partial views/comments/_comments.html.erb -->
+  <div id="comments" data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
+  </div>
+  <!-- End comments -->
+
 </div>
 
 
