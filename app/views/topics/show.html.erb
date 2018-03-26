@@ -1,0 +1,12 @@
+<div class="col-md-8">
+  <h1><%= @topic.title %></h1>
+
+  <%= paginate @blogs %>
+  <!-- will look for a partial _blog.html.erb (singular) and it will iterate @blogs object based on the partial model-->
+  <%= render @blogs %>
+  <%= paginate @blogs %>
+  <%= link_to "Back to Topics", topics_path %>
+
+</div>
+
+

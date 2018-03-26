@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :topics, only: [:index, :show]
+
   #no need for resources for comments because websocket in actioncable
   #comments resources will be wrapped in the actioncable socket
   #resources :comments
