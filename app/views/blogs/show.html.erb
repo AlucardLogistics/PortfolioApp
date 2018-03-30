@@ -3,7 +3,7 @@
   <h2><%= @blog.title %></h2>
   <hr>
   <p><%= @blog.topic.title %></p>
-  <p><%= @blog.body %></p>
+  <p><%= markdown @blog.body %></p>
 
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
   <b> | </b>
