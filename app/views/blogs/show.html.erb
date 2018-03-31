@@ -5,7 +5,6 @@
 
   <nav class="breadcrumb row">
     <div class="col">
-
       <%= link_to fa_icon("arrow-circle-left"), blogs_path, class: "breadcrumb-item" %>
       <%= link_to 'Home', root_path, class: "breadcrumb-item" %>
       <%= link_to @blog.topic.title, topic_path(@blog.topic.id), class: "breadcrumb-item" %>
