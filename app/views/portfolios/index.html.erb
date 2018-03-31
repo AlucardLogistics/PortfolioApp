@@ -1,6 +1,7 @@
 <main role="main">
   <div class="album py-5 bg-light">
     <div class="container">
+      <%= source_helper("alert alert-warning text-center") %>
       <%= link_to "Create new Portfolio", new_portfolio_path if logged_in?(:site_admin) %>
       <br><br>
       <div class="row <%= "sortable" if logged_in?(:site_admin) %>" >        
