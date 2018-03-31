@@ -176,3 +176,15 @@ body {
 .tech-news > .card {
   padding: 10px;
 }
+.app-card-containter {
+  color: black;
+  text-align: left;
+  opacity: 0.9;
+}
+.app-card-containter > .card {
+  padding: 40px;
+}
+
+.app-card-containter a {
+  color: blue;
+}
