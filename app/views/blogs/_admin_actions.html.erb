@@ -1,0 +1,11 @@
+<% if logged_in?(:site_admin) %>
+  <nav class="breadcrumb row blogcrum">
+    <div class="col">
+      <%= link_to blog.status, toggle_status_blog_path(blog) %>
+      <span class="float-right">
+        <%= link_to fa_icon('pencil-square-o'), edit_blog_path(blog) %>
+        <%= link_to fa_icon('trash'), blog_path(blog), method: :delete, data: { confirm: 'Are you sure?' } %>        
+      </span>
+    </div>
+  </nav>
+<% end %>
