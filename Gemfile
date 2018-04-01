@@ -85,3 +85,5 @@ gem 'redis', '~> 4.0', '>= 4.0.1'
 gem 'redcarpet', '~> 3.4'
 #Fast and easy syntax highlighting for selected languages, written in Ruby. Comes with RedCloth integration and LOC counter.
 gem 'coderay', '~> 1.1', '>= 1.1.2'
+
+ruby "2.4.3" 
