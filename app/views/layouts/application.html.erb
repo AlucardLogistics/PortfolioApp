@@ -9,7 +9,11 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Mina|Roboto" rel="stylesheet">
+
     <meta name= "keywords" content= "<%= @seo_keywords %>" />
+
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -38,9 +42,7 @@
 
         <!-- render the gritter styled alerts from application_helper.rb -->
         <%= alerts %>
-
-        <!-- method found in helpers/application_helper.rb-->
-        <%= source_helper("application") %>
+        
     </div>
   </body>
 </html>

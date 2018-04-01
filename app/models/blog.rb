@@ -10,8 +10,13 @@ class Blog < ApplicationRecord
     title_changed?
   end
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
   belongs_to :topic, optional: true
   has_many :comments, dependent: :destroy
+  
+
+  def self.recent
+    order("updated_at DESC")
+  end
   
 end
