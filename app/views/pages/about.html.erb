@@ -2,6 +2,7 @@
   <div class="card">
     <h1>About me</h1>
     <hr />
+
     <div class="row">
       <div class="col-md-4">
         
@@ -10,6 +11,53 @@
 
       <div class="col-md-8">
         <p>Something Something dark side, Something Something complete ...</p>
+
+        <p>
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#projectsHistory"
+            aria-expanded="false"
+            aria-controller="projectsHistory"
+          >            
+            Projects History
+          </button>
+
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#education"
+            aria-expanded="false"
+            aria-controller="education"
+          >            
+            Education
+          </button>
+        </p>
+
+        <p>
+          <div class="collapse" id="projectsHistory">
+            <div class="card card-block">
+              project 1
+            </div>
+
+            <div class="card card-block">
+              project 2
+            </div>
+          </div>
+
+          <div class="collapse" id="education">
+            <div class="card card-block">
+              education 1
+            </div>
+
+            <div class="card card-block">
+              education 2
+            </div>
+          </div>
+          
+        </p>
       </div>
       
     </div>
