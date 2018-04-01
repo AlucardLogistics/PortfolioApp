@@ -5,7 +5,7 @@
 
     <div class="row">
       <div class="col-md-4">        
-        <%= image_tag "profile.jpg", width: 300, alt: "profile image" %>
+        <%= image_tag "profile.png", width: 300, alt: "profile image" %>
         <div class="skills">
           <% @skills.order('percent_utilized DESC').each do |skill| %>
             <div class="skill">
@@ -25,7 +25,9 @@
       </div>
 
       <div class="col-md-8">
-        <p>Something Something dark side, Something Something complete ...</p>
+        <p>I just graduated computer science and I developed a passion for designing web applications. My favorite language to work with is ruby on rails. This web application is my first fully comeplete application and I enjoyed learnging and develop it.</p>
+
+        <p>I am also studying android studio and working on a few personal projects right now. I enjoy very much creating applications for mobile devices that you can take anywhere and ofcourse I spend a lot of time to create the best design that would make an app user friendly and intuitive.</p>
 
         <p>
           <button
@@ -54,21 +56,21 @@
         <p>
           <div class="collapse" id="projectsHistory">
             <div class="card card-block">
-              project 1
+              <%= link_to 'Pet Blog', "http://apetstory.herokuapp.com/" , target: "_blank" %>
             </div>
 
             <div class="card card-block">
-              project 2
+              Java database custom filters to calculate workloads costs.
             </div>
           </div>
 
           <div class="collapse" id="education">
             <div class="card card-block">
-              education 1
+              Technical University - Industrial Design
             </div>
 
             <div class="card card-block">
-              education 2
+              Computer System Institute - Computer Science
             </div>
           </div>
           
