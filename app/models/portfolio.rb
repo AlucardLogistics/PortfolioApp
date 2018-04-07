@@ -2,7 +2,7 @@ class Portfolio < ApplicationRecord
 
   #table relationship one to many technologies (rails handle pluralization)
   #inverse of: is an association for cocoon gem
-  has_many :technologies, inverse_of: :portfolio
+  has_many :technologies, inverse_of: :portfolio, dependent: :destroy
 
   #accepts attributes from technologies table and validates to not be blank
   accepts_nested_attributes_for :technologies,
