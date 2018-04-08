@@ -26,4 +26,9 @@ module PagesHelper
       "<a href='#{url}' target='_blank'>#{url}</a>"
     end.html_safe 
   end
+
+  def tel_to(text)
+    groups = text.to_s.scan(/(?:^\+)?\d+/)
+    link_to text, "tel:#{groups.join '-'}"
+  end
 end
